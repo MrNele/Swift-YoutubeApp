@@ -13,6 +13,9 @@
 		8819A2E6276B795900294703 /* VideoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819A2E5276B795900294703 /* VideoRow.swift */; };
 		8819A2E8276B819900294703 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819A2E7276B819900294703 /* Home.swift */; };
 		88266AD72767D22600D89701 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88266AD62767D22600D89701 /* Constants.swift */; };
+		8875C4942777B6F900948E92 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8875C4932777B6F900948E92 /* RatingModel.swift */; };
+		8875C4982777BB0100948E92 /* LikeAndSubscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8875C4972777BB0100948E92 /* LikeAndSubscribe.swift */; };
+		8875C49A2777C0CA00948E92 /* YoutubeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8875C4992777C0CA00948E92 /* YoutubeRequest.swift */; };
 		8878323C27774554004CC946 /* GIDSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878323B27774554004CC946 /* GIDSignInManager.swift */; };
 		8878323E27776CA4004CC946 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8878323D27776CA4004CC946 /* GoogleSignInButton.swift */; };
 		88A97355276A688D00D010DE /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A97354276A688D00D010DE /* VideoPreview.swift */; };
@@ -34,6 +37,9 @@
 		8819A2E5276B795900294703 /* VideoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRow.swift; sourceTree = "<group>"; };
 		8819A2E7276B819900294703 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		88266AD62767D22600D89701 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8875C4932777B6F900948E92 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		8875C4972777BB0100948E92 /* LikeAndSubscribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAndSubscribe.swift; sourceTree = "<group>"; };
+		8875C4992777C0CA00948E92 /* YoutubeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRequest.swift; sourceTree = "<group>"; };
 		8878323A2777439F004CC946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8878323B27774554004CC946 /* GIDSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIDSignInManager.swift; sourceTree = "<group>"; };
 		8878323D27776CA4004CC946 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
@@ -80,10 +86,11 @@
 		8819A2DE276B651C00294703 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8819A2E7276B819900294703 /* Home.swift */,
+				8875C4972777BB0100948E92 /* LikeAndSubscribe.swift */,
 				8819A2E1276B662100294703 /* YouTubeVideoPlayer.swift */,
 				8819A2E3276B6C0300294703 /* VideoDetail.swift */,
 				8819A2E5276B795900294703 /* VideoRow.swift */,
-				8819A2E7276B819900294703 /* Home.swift */,
 				8878323D27776CA4004CC946 /* GoogleSignInButton.swift */,
 			);
 			path = Views;
@@ -95,6 +102,7 @@
 				88D3F85D276A05CA0037EDBA /* VideoModel.swift */,
 				88A97354276A688D00D010DE /* VideoPreview.swift */,
 				8878323B27774554004CC946 /* GIDSignInManager.swift */,
+				8875C4932777B6F900948E92 /* RatingModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 			children = (
 				88266AD62767D22600D89701 /* Constants.swift */,
 				88A97356276A741F00D010DE /* CacheManager.swift */,
+				8875C4992777C0CA00948E92 /* YoutubeRequest.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,14 +282,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D69BA5276930AF00EEE43C /* Response.swift in Sources */,
+				8875C49A2777C0CA00948E92 /* YoutubeRequest.swift in Sources */,
 				8819A2E2276B662100294703 /* YouTubeVideoPlayer.swift in Sources */,
 				88A97355276A688D00D010DE /* VideoPreview.swift in Sources */,
 				88D3F85E276A05CA0037EDBA /* VideoModel.swift in Sources */,
+				8875C4942777B6F900948E92 /* RatingModel.swift in Sources */,
 				8878323C27774554004CC946 /* GIDSignInManager.swift in Sources */,
 				8819A2E6276B795900294703 /* VideoRow.swift in Sources */,
 				88A97357276A741F00D010DE /* CacheManager.swift in Sources */,
 				8819A2E4276B6C0300294703 /* VideoDetail.swift in Sources */,
 				88E3232F27650728005F9978 /* YoutubeApp.swift in Sources */,
+				8875C4982777BB0100948E92 /* LikeAndSubscribe.swift in Sources */,
 				88266AD72767D22600D89701 /* Constants.swift in Sources */,
 				8878323E27776CA4004CC946 /* GoogleSignInButton.swift in Sources */,
 				8819A2E8276B819900294703 /* Home.swift in Sources */,

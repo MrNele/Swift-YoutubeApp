@@ -17,8 +17,11 @@ struct YoutubeApp: App {
     init () {
         
         // Sets the client ID and delegate
-        GIDSignIn.sharedInstance()?.clientID = Constants.GID_SIGN_IN_ID
-        GIDSignIn.sharedInstance()?.delegate = signInManager
+        GIDSignIn.sharedInstance().clientID = Constants.GID_SIGN_IN_ID
+        GIDSignIn.sharedInstance().delegate = signInManager
+        
+        // Specifies that we need to authenticate users for YouTube access
+        GIDSignIn.sharedInstance().scopes.append(Constants.YT_AUTH_SCOPE)
     }
     
     var body: some Scene {

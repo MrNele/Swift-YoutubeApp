@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct VideoDetail: View {
+    @EnvironmentObject var signInManager: GoogleSignInManager
     var video: Video
     
     var date: String {
@@ -32,6 +33,15 @@ struct VideoDetail: View {
                 .aspectRatio(CGSize(width: 1280, height: 720),
                 contentMode: .fit)
             
+            // If the user is signed in, shows the option to like and subscribe
+            if signInManager.signedIn {
+                LikeAndSubscribe(video: video, accessToken: signInManager.accessToken)
+            // Sets the buttons to fade on insert
+                    .transition(.opacity)
+                // Uses the parent views animation
+                    .animation(.default)
+            }
+            
             // Displays the video descriptions
             ScrollView{
                 Text(video.description)
@@ -48,5 +58,6 @@ struct VideoDetail: View {
 struct VideoDetail_Previews: PreviewProvider {
     static var previews: some View {
         VideoDetail(video: Video())
+            .environmentObject(GoogleSignInManager())
     }
 }

@@ -13,6 +13,7 @@ let backgroundColor = Color(red: 31 / 255, green: 33 / 255, blue: 36 / 255)
 struct Home: View {
     @EnvironmentObject var signInManager: GoogleSignInManager
     @StateObject var model = VideoModel()
+    @State private var rowSize = CGSize = .zero
     
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct Home: View {
                     .transition(.move(edge: .top))
                     .onOpenURL(perform: { url in
                         // Opens sign in URL when the button is clicked
-                        GIDSignIn.sharedInstance().handle(url)
+                        GIDSignIn.sharedInstance.handle(url)
                     })
             }
             
@@ -66,7 +67,7 @@ struct Home: View {
         animation(_:.easeOut)
             .onAppear{
                 // Restores the users previous sign in status
-                GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+                GIDSignIn.sharedInstance.restorePreviousSignIn()
             }
     }
 }
