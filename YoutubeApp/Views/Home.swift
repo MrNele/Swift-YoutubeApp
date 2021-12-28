@@ -13,7 +13,7 @@ let backgroundColor = Color(red: 31 / 255, green: 33 / 255, blue: 36 / 255)
 struct Home: View {
     @EnvironmentObject var signInManager: GoogleSignInManager
     @StateObject var model = VideoModel()
-    @State private var rowSize = CGSize = .zero
+    @State private var rowSize: CGSize = .zero
     
     var body: some View {
         VStack {
